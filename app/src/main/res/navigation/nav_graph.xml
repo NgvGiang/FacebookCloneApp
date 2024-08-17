@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_notification"
+        android:name="com.example.fbclone.NotificationFragment"
+        android:label="fragment_notification"
+        tools:layout="@layout/fragment_notification" >
+        <action
+            android:id="@+id/action_navigation_notification_to_navigation_profile"
+            app:destination="@id/navigation_profile" />
+        <action
+            android:id="@+id/action_navigation_notification_to_navigation_video"
+            app:destination="@id/navigation_video" />
+        <action
+            android:id="@+id/action_navigation_notification_to_navigation_home"
+            app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/action_navigation_notification_to_navigation_friends"
+            app:destination="@id/navigation_friends" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_friends"
+        android:name="com.example.fbclone.FriendFragment"
+        android:label="fragment_friend"
+        tools:layout="@layout/fragment_friend" >
+        <action
+            android:id="@+id/action_navigation_friends_to_navigation_video"
+            app:destination="@id/navigation_video" />
+        <action
+            android:id="@+id/action_navigation_friends_to_navigation_notification"
+            app:destination="@id/navigation_notification" />
+        <action
+            android:id="@+id/action_navigation_friends_to_navigation_profile"
+            app:destination="@id/navigation_profile" />
+        <action
+            android:id="@+id/action_navigation_friends_to_navigation_home"
+            app:destination="@id/navigation_home" />
+
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.fbclone.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_profile"
+            app:destination="@id/navigation_profile" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_friends"
+            app:destination="@id/navigation_friends" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_video"
+            app:destination="@id/navigation_video" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_notification"
+            app:destination="@id/navigation_notification" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.example.fbclone.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_navigation_profile_to_navigation_notification"
+            app:destination="@id/navigation_notification" />
+        <action
+            android:id="@+id/action_navigation_profile_to_navigation_home"
+            app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/action_navigation_profile_to_navigation_friends"
+            app:destination="@id/navigation_friends" />
+        <action
+            android:id="@+id/action_navigation_profile_to_navigation_video"
+            app:destination="@id/navigation_video" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_video"
+        android:name="com.example.fbclone.VideoFragment"
+        android:label="fragment_video"
+        tools:layout="@layout/fragment_video" >
+        <action
+            android:id="@+id/action_navigation_video_to_navigation_notification"
+            app:destination="@id/navigation_notification" />
+        <action
+            android:id="@+id/action_navigation_video_to_navigation_profile"
+            app:destination="@id/navigation_profile" />
+        <action
+            android:id="@+id/action_navigation_video_to_navigation_friends"
+            app:destination="@id/navigation_friends" />
+        <action
+            android:id="@+id/action_navigation_video_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+</navigation>
